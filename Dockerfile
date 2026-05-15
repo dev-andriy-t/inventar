@@ -4,7 +4,7 @@ WORKDIR /src
 
 # Копіюємо файл проєкту і відновлюємо пакети
 COPY ["inventar.csproj", "./"]
-RUN dotnet restore "inventar.csproj"
+RUN dotnet restore "oop better.csproj"
 
 # Копіюємо решту файлів і публікуємо
 COPY . .
@@ -19,4 +19,4 @@ COPY --from=build /app/publish .
 ENV ASPNETCORE_URLS=http://+:8080
 EXPOSE 8080
 
-ENTRYPOINT ["dotnet", "inventar.dll"]
+ENTRYPOINT ["dotnet", "oop better.dll"]
