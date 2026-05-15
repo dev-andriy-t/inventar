@@ -8,7 +8,7 @@ RUN dotnet restore "inventar.csproj"
 
 # Копіюємо решту файлів і публікуємо
 COPY . .
-RUN dotnet publish "inventar.csproj" -c Release -o /app/publish
+RUN dotnet publish "oop better.csproj" -c Release -o /app/publish
 
 # Використовуємо рантайм для запуску
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
