@@ -3,7 +3,7 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
 # Копіюємо файл проєкту і відновлюємо пакети
-COPY ["inventar.csproj", "./"]
+COPY ["oop better.csproj", "./"]
 RUN dotnet restore "oop better.csproj"
 
 # Копіюємо решту файлів і публікуємо
